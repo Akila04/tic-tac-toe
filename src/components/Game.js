@@ -37,6 +37,9 @@ class Game extends Component{
 			return;
 		}
 	}
+	restartGame() {
+		window.location.reload(false);
+	}
 	render(){
 
 		const history=this.state.history;
@@ -45,7 +48,23 @@ class Game extends Component{
 			<div className='game'>
 				<div className='game-board'>
 					<Board squares={current.squares} onClick={(i)=>this.clickHandler(i)} />
-					<p className="winner">{this.state.winner}</p>
+					<h1 className="winner">{this.state.winner}</h1>
+					{this.state.winner !== '' && 
+						<div 
+							style={{
+								justifyContent:'center',
+								alignContent:'center',
+								textAlign:'center'
+							}}
+						>
+							<button 
+								className= "restartGameButton"
+								onClick={()=>{this.restartGame()}}
+							>
+								Restart Game
+							</button>
+						</div>
+					}
 				</div>
 			</div>
 		);

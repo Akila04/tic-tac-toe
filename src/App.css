@@ -5,12 +5,13 @@
 	margin-right:-1px;
 	margin-top:-1px;
 	padding:0;
-	width:210px;
-	height:190px;
+	width:150px;
+	height:150px;
 	text-align:center;
-	font-size:100px;
+	font-size:70px;
 	font-weight:bold;
-	line-height:210px;
+	/*line-height:210px;*/
+	text-align: center;
 }
 .square:focus{
 	outline:none;
@@ -43,5 +44,16 @@
 	color:white;
 	margin-top:-25px;
 	font-weight:900;	
+}
+
+.restartGameButton{
+	width: 150px;
+	height: 40px;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	margin-top: -20px;
+	font-size: medium;
+	font-weight: 700;
+	cursor: pointer;
 }
 
